@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meera's Home Bakes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F5E4;--ink:#4A1631;--muted:#6E4C5F;--line:#B9A8B1;--accent:#F6D66B;--wa:#17803D;--wa-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E1218;--ink:#F6EAF0;--muted:#C4A6B5;--line:#6B4F5E;--wa:#1F9D52}}
+:root[data-theme="dark"]{--bg:#1E1218;--ink:#F6EAF0;--muted:#C4A6B5;--line:#6B4F5E;--wa:#1F9D52}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.5 Figtree,system-ui,sans-serif;padding-bottom:110px}
+header{position:relative;background:var(--accent);color:#4A1631;padding:40px 20px 38px;margin-bottom:14px}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:radial-gradient(circle at 10px 0,var(--accent) 10px,transparent 11px) repeat-x;background-size:20px 14px}
+.wrap{max-width:520px;margin:0 auto}
+h1{font:400 46px/1.02 "Young Serif",Georgia,serif;margin:0 0 12px}
+.tag{margin:0 0 20px;font-size:18px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.badges li{border:1.5px solid #4A1631;border-radius:99px;padding:3px 12px;font-size:14px;font-weight:600}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px}
+nav .wrap{display:flex;gap:8px;overflow-x:auto}
+nav a{white-space:nowrap;border:1.5px solid var(--ink);border-radius:99px;padding:6px 14px;font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}
+main{padding:0 20px}
+h2{font:400 26px/1.2 "Young Serif",Georgia,serif;margin:30px 0 4px;scroll-margin-top:70px}
+.note{margin:0 0 6px;color:var(--muted);font-size:15px}
+ul.menu{list-style:none;margin:0;padding:0}
+.item{display:grid;grid-template-columns:36px 1fr auto;gap:0 12px;align-items:center;padding:14px 8px;margin:0 -8px;border-bottom:2px dotted var(--line);border-radius:12px}
+.item.on{background:color-mix(in srgb,var(--accent) 24%,transparent)}
+.em{font-size:28px;grid-row:span 2}
+.name{font-weight:600}
+.love{font-size:12px;font-weight:600;background:var(--ink);color:var(--bg);border-radius:99px;padding:1px 9px;margin-left:6px;white-space:nowrap}
+.size{color:var(--muted);font-size:15px}
+.price{font:400 20px "Young Serif",Georgia,serif;text-align:right}
+.step{display:flex;align-items:center;gap:4px;justify-self:end}
+.step button{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:600 24px/1 Figtree,sans-serif;cursor:pointer;padding:0}
+.step button:disabled{opacity:.3;cursor:default}
+.step .q{min-width:24px;text-align:center;font-weight:600}
+.step .q.zero{color:var(--muted)}
+button:focus-visible,nav a:focus-visible,.bar a:focus-visible,.custom a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.trust{display:grid;gap:6px;margin:22px 0 0;padding:16px;border-radius:18px;background:var(--accent);color:#4A1631;font-weight:600;list-style:none}
+.custom{margin-top:30px;border:2px dashed var(--line);border-radius:18px;padding:18px}
+.custom h3{font:400 21px/1.2 "Young Serif",Georgia,serif;margin:0 0 6px}
+.custom p{margin:0 0 10px;color:var(--muted)}
+.custom a{color:var(--wa);font-weight:600;text-underline-offset:3px}
+.how{list-style:none;margin:0;padding:0}
+.how li{padding:11px 0;border-bottom:1px solid var(--line)}
+.small{color:var(--muted);font-size:14px;margin:28px 0 0}
+.bar{position:fixed;left:0;right:0;bottom:0;padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+.bar a{display:block;max-width:520px;margin:0 auto;text-align:center;background:var(--wa);color:var(--wa-ink);font-weight:600;font-size:18px;padding:13px;border-radius:14px;text-decoration:none}
+.bar a.empty{background:transparent;border:2px solid var(--line);color:var(--muted);padding:11px}
+.bar span{display:block;max-width:520px;margin:6px auto 0;text-align:center;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Meera's Home Bakes</h1>
+<p class="tag">Baked fresh at home in Rohini, Delhi.</p>
+<ul class="badges"><li>Baked to order</li><li>Eggless options</li><li>Diwali boxes open</li></ul>
+</div></header>
+
+<nav aria-label="Menu sections"><div class="wrap" id="chips"></div></nav>
+
+<main><div class="wrap">
+<div id="menu"></div>
+
+<ul class="trust">
+<li>Baked the morning of delivery</li>
+<li>No preservatives, no premixes</li>
+<li>Made in a home kitchen in Rohini</li>
+</ul>
+
+<div class="custom">
+<h3>Want a birthday or custom cake?</h3>
+<p>Tell me the weight, flavour and any message for the cake. I'll send a price in a few minutes.</p>
+<a id="custom" href="#">Ask for a custom cake</a>
+</div>
+
+<h2>How it works</h2>
+<ul class="how">
+<li><b>Pick your items.</b> Tap + to add as many as you want.</li>
+<li><b>Send your order.</b> WhatsApp opens with the full list typed in.</li>
+<li><b>I confirm and you pay by UPI.</b> Delivery in Rohini, Pitampura and Shalimar Bagh.</li>
+</ul>
+
+<p class="small">Instagram @meeras.homebakes<br>FSSAI reg. no. (add yours here)</p>
+</div></main>
+
+<div class="bar"><a id="send" class="empty" href="#">Add items to start your order</a><span>Final price and delivery time confirmed on WhatsApp</span></div>
+
+<script>
+// Change only this block for each new baker.
+var PHONE="919999999999", BAKER="Meera";
+var MENU=[
+ {g:"Cakes",note:"Order 2 days ahead.",items:[
+  {e:"🍫",n:"Chocolate truffle cake",s:"500 g, serves 4-5",p:650,love:1},
+  {e:"🍰",n:"Red velvet cake",s:"500 g, cream cheese frosting",p:700},
+  {e:"🍞",n:"Banana walnut loaf",s:"Whole loaf, eggless",p:280}]},
+ {g:"Cookies",note:"Packed fresh, 250 g is about 10 cookies.",items:[
+  {e:"🍪",n:"Choco-chip cookies",s:"250 g, crisp edge, soft centre",p:250,love:1},
+  {e:"🍫",n:"Double chocolate cookies",s:"250 g",p:280},
+  {e:"🌾",n:"Oatmeal raisin cookies",s:"250 g, eggless",p:260},
+  {e:"🥜",n:"Jaggery and almond cookies",s:"250 g, eggless, no refined sugar",p:320},
+  {e:"✨",n:"Nankhatai",s:"250 g, 12 pieces, eggless",p:240},
+  {e:"🎁",n:"Cookie gift box",s:"500 g, 3 flavours, ribbon tied",p:520}]},
+ {g:"Small bakes",note:"Same-day orders okay for brownies.",items:[
+  {e:"🧁",n:"Cupcakes",s:"Box of 6, mixed flavours",p:360},
+  {e:"🟫",n:"Fudgy brownies",s:"Box of 8",p:320}]}
+];
+
+var qty={}, html="", chips="";
+function inr(n){return "₹"+n.toLocaleString("en-IN");}
+MENU.forEach(function(grp,gi){
+  chips+='<a href="#g'+gi+'">'+grp.g+'</a>';
+  html+='<h2 id="g'+gi+'">'+grp.g+'</h2><p class="note">'+grp.note+'</p><ul class="menu">';
+  grp.items.forEach(function(it,ii){
+    var k=gi+"-"+ii; qty[k]=0;
+    html+='<li class="item"><span class="em">'+it.e+'</span><span class="name">'+it.n+(it.love?'<span class="love">Most loved</span>':'')+'</span><span class="price">'+inr(it.p)+'</span><span class="size">'+it.s+'</span><span class="step"><button data-k="'+k+'" data-d="-1" aria-label="Remove one '+it.n+'" disabled>−</button><span class="q zero" id="q'+k+'" aria-live="polite">0</span><button data-k="'+k+'" data-d="1" aria-label="Add one '+it.n+'">+</button></span></li>';
+  });
+  html+='</ul>';
+});
+document.getElementById("menu").innerHTML=html;
+document.getElementById("chips").innerHTML=chips;
+
+function wa(text){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(text);}
+document.getElementById("custom").href=wa("Hi "+BAKER+", I want a custom cake.\nWeight:\nFlavour:\nDate needed:");
+
+function update(){
+  var count=0,total=0,lines=[];
+  MENU.forEach(function(grp,gi){grp.items.forEach(function(it,ii){
+    var k=gi+"-"+ii,q=qty[k];
+    var qe=document.getElementById("q"+k); qe.textContent=q; qe.className="q"+(q?"":" zero");
+    qe.closest(".item").classList.toggle("on",q>0);
+    document.querySelector('button[data-k="'+k+'"][data-d="-1"]').disabled=!q;
+    if(q){count+=q;total+=q*it.p;lines.push(q+" x "+it.n+" ("+it.s+") - "+inr(q*it.p));}
+  });});
+  var a=document.getElementById("send");
+  if(!count){a.className="empty";a.textContent="Add items to start your order";a.href="#";return;}
+  a.className="";
+  a.textContent="Send order on WhatsApp · "+inr(total)+" ("+count+(count>1?" items)":" item)");
+  a.href=wa("Hi "+BAKER+", I want to order:\n"+lines.join("\n")+"\nTotal: "+inr(total)+"\n\nName:\nDelivery address:\nDate needed:");
+}
+document.getElementById("menu").addEventListener("click",function(e){
+  var b=e.target.closest("button[data-k]"); if(!b)return;
+  qty[b.dataset.k]=Math.max(0,Math.min(20,qty[b.dataset.k]+Number(b.dataset.d)));
+  update();
+});
+document.getElementById("send").addEventListener("click",function(e){if(this.className==="empty")e.preventDefault();});
+update();
+</script>
+</body>
+</html>
